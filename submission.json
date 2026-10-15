@@ -1,0 +1,25 @@
+{
+  "company": "Hairdramaco India Private Limited",
+  "brand": "Hair Drama Co.",
+  "role": "Full Stack Development",
+  "live_url": "https://hairdramacoindiaprivatelimited.vercel.app",
+  "repo_url": "https://github.com/yash560/hairdramaco_india_private_limited-assignment",
+  "git_ssh": "git@github-yash560:yash560/hairdramaco_india_private_limited-assignment.git",
+  "recruiter": "Vivek",
+  "google_form_url": "https://forms.gle/jdR6r8RsCXQi6VcW6",
+  "summary": "Hairdrama FlowOS is a collaborative task and workflow orchestration platform custom-engineered for Hair Drama Co. Private Limited (India's premier luxury fashion hair accessories brand). Built with Supabase (PostgreSQL 15), Python Flask RESTful backend microservices, Next.js 15 App Router, React 19, TypeScript, and Tailwind CSS v4, it satisfies all mandatory assignment directives: (1) Google OAuth 2.0 login and multi-persona switching across real Hair Drama Co departments; (2) Interactive task creation with priority matrices and due dates; (3) Dynamic task assignment across team members with workload telemetry; (4) Automated Gmail SMTP notifications dispatched on task creation (to assignee) and task completion (to creator and assignee) featuring luxury HTML templates. Additional commercial-grade features include dual Kanban and Table views, a real-time Gmail Delivery HUD & rendered email inspector, chronological task audit trail, and 12/12 deterministic passing automated tests.",
+  "tech_stack": [
+    "Next.js 15 App Router",
+    "React 19",
+    "TypeScript",
+    "Tailwind CSS v4",
+    "Flask (Python 3.11)",
+    "Supabase (PostgreSQL 15)",
+    "Google OAuth 2.0",
+    "Gmail SMTP Integration",
+    "Vercel Edge Platform",
+    "Deterministic Test Suite (Pytest & Node)"
+  ],
+  "submitted_at": "2026-10-15T04:04:00.000Z",
+  "status": "completed"
+}
