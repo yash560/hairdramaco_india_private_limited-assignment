@@ -22,8 +22,8 @@ export const api = {
     // Fallback
     const user: User = {
       id: crypto.randomUUID(),
-      email: profile?.email || 'yash.dev@hairdramaco.com',
-      name: profile?.name || 'Yash Jain',
+      email: profile?.email || 'alex.tech@hairdramaco.com',
+      name: profile?.name || 'Alex Vance',
       avatar_url: profile?.avatar_url || 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=256&q=80',
       role: 'Lead Full-Stack Architect',
       department: 'Technology & Systems'

@@ -33,7 +33,7 @@ export default function HairdramaDashboard() {
   // State
   const [tasks, setTasks] = useState<Task[]>(INITIAL_TASKS);
   const [users, setUsers] = useState<User[]>(INITIAL_USERS);
-  const [currentUser, setCurrentUser] = useState<User>(INITIAL_USERS[3]); // Default: Yash Jain
+  const [currentUser, setCurrentUser] = useState<User>(INITIAL_USERS[3]); // Default: Lead Architect
   const [notifications, setNotifications] = useState<EmailNotification[]>(INITIAL_NOTIFICATIONS);
   const [viewMode, setViewMode] = useState<ViewMode>('kanban');
 
@@ -240,34 +240,34 @@ export default function HairdramaDashboard() {
 
       {/* Top Luxury Navigation */}
       <header className="border-b border-zinc-800/80 bg-[#0b0d14]/90 backdrop-blur-md sticky top-0 z-30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-2">
           {/* Brand Identity */}
-          <div className="flex items-center gap-4">
-            <div className="flex items-center gap-2.5">
-              <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-[#d4af37] via-[#b8972e] to-[#8c731e] p-[1px] flex items-center justify-center shadow-lg">
+          <div className="flex items-center gap-2 sm:gap-4 shrink min-w-0">
+            <div className="flex items-center gap-2">
+              <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-gradient-to-br from-[#d4af37] via-[#b8972e] to-[#8c731e] p-[1px] flex items-center justify-center shadow-lg shrink-0">
                 <div className="w-full h-full bg-[#0d0f17] rounded-[7px] flex items-center justify-center">
-                  <span className="font-serif font-black text-sm tracking-tighter text-[#d4af37]">HD</span>
+                  <span className="font-serif font-black text-xs sm:text-sm tracking-tighter text-[#d4af37]">HD</span>
                 </div>
               </div>
-              <div>
-                <div className="flex items-center gap-2">
-                  <h1 className="text-base font-bold tracking-widest uppercase font-serif text-zinc-100">HAIR DRAMA CO.</h1>
-                  <span className="px-1.5 py-0.5 text-[10px] font-bold rounded bg-[#d4af37]/15 text-[#d4af37] border border-[#d4af37]/30 tracking-wider">FlowOS</span>
+              <div className="min-w-0">
+                <div className="flex items-center gap-1.5">
+                  <h1 className="text-xs sm:text-base font-bold tracking-wider uppercase font-serif text-zinc-100 truncate">HAIR DRAMA</h1>
+                  <span className="px-1 py-0.5 text-[9px] sm:text-[10px] font-bold rounded bg-[#d4af37]/15 text-[#d4af37] border border-[#d4af37]/30 tracking-wider">FlowOS</span>
                 </div>
-                <p className="text-[11px] text-zinc-400 tracking-wider uppercase font-medium">Task Orchestration & Gmail Workflows</p>
+                <p className="text-[10px] text-zinc-400 tracking-wider uppercase font-medium hidden md:block">Task Orchestration & Gmail Workflows</p>
               </div>
             </div>
           </div>
 
           {/* Action Hub */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-1.5 sm:gap-3 shrink-0">
             {/* Architecture Modal Button */}
             <button
               onClick={() => setIsArchModalOpen(true)}
               className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg bg-zinc-900 border border-zinc-700 hover:border-zinc-500 text-zinc-300 transition-colors"
             >
               <BookOpen className="w-3.5 h-3.5 text-[#d4af37]" />
-              <span>Architecture & Specs</span>
+              <span>Specs</span>
             </button>
 
             {/* Video Walkthrough Button */}
@@ -276,7 +276,7 @@ export default function HairdramaDashboard() {
               className="hidden md:flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg bg-zinc-900 border border-zinc-700 hover:border-zinc-500 text-zinc-300 transition-colors"
             >
               <Video className="w-3.5 h-3.5 text-rose-400" />
-              <span>Code Walkthrough</span>
+              <span>Walkthrough</span>
             </button>
 
             {/* Gmail Notification Center Trigger */}
@@ -296,27 +296,27 @@ export default function HairdramaDashboard() {
             {/* Persona Switcher Pill */}
             <button
               onClick={() => setIsPersonaModalOpen(true)}
-              className="flex items-center gap-2 px-2.5 py-1.5 rounded-lg bg-zinc-900/90 border border-zinc-800 hover:border-[#d4af37]/50 text-left transition-colors"
+              className="flex items-center gap-1.5 p-1.5 sm:px-2.5 sm:py-1.5 rounded-lg bg-zinc-900/90 border border-zinc-800 hover:border-[#d4af37]/50 text-left transition-colors"
             >
               <img
                 src={currentUser.avatar_url || "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=256&q=80"}
                 alt={currentUser.name}
-                className="w-6 h-6 rounded-full object-cover border border-[#d4af37]/40"
+                className="w-5 h-5 sm:w-6 sm:h-6 rounded-full object-cover border border-[#d4af37]/40"
               />
               <div className="hidden sm:block">
                 <div className="text-xs font-bold text-zinc-200 leading-tight">{currentUser.name}</div>
                 <div className="text-[10px] text-zinc-400 leading-tight">{currentUser.role?.split(' ')[0]}</div>
               </div>
-              <ChevronRight className="w-3.5 h-3.5 text-zinc-400" />
+              <ChevronRight className="w-3 h-3 text-zinc-400" />
             </button>
 
             {/* Primary CTA: Create Task */}
             <button
               onClick={() => setIsCreateOpen(true)}
-              className="flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-gradient-to-r from-[#d4af37] to-[#b8972e] hover:from-[#e5bd3c] hover:to-[#c7a433] text-zinc-950 font-bold text-xs uppercase tracking-wider shadow-lg transition-transform active:scale-95"
+              className="flex items-center gap-1 sm:gap-2 px-2.5 sm:px-3.5 py-1.5 rounded-lg bg-gradient-to-r from-[#d4af37] to-[#b8972e] hover:from-[#e5bd3c] hover:to-[#c7a433] text-zinc-950 font-bold text-xs uppercase tracking-wider shadow-lg transition-transform active:scale-95"
             >
               <Plus className="w-4 h-4 stroke-[3]" />
-              <span>Create Task</span>
+              <span className="hidden sm:inline">Create Task</span>
             </button>
           </div>
         </div>
@@ -1246,13 +1246,15 @@ export default function HairdramaDashboard() {
       )}
 
       {/* Footer */}
-      <footer className="mt-auto border-t border-zinc-800/80 bg-[#0b0d14] py-4 text-center text-xs text-zinc-500">
-        <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
+      <footer className="mt-auto border-t border-zinc-800/80 bg-[#0b0d14] py-6 text-center text-xs text-zinc-500">
+        <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3">
           <div>
             Hair Drama Co. Private Limited • Makarba, Ahmedabad
           </div>
-          <div>
-            Engineered by <strong className="text-zinc-300">Yash Jain</strong> for Hairdrama Tech Internship Assessment
+          <div className="flex items-center gap-3">
+            <span className="text-[#d4af37] font-medium font-mono">⚡ Powered by TheWebVale</span>
+            <span>•</span>
+            <span>Production Collaborative Task Architecture</span>
           </div>
         </div>
       </footer>

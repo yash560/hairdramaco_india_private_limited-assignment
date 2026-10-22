@@ -27,8 +27,8 @@ export const INITIAL_USERS: User[] = [
   },
   {
     id: "44444444-4444-4444-4444-444444444444",
-    email: "yash.dev@hairdramaco.com",
-    name: "Yash Jain",
+    email: "alex.tech@hairdramaco.com",
+    name: "Alex Vance",
     avatar_url: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=256&q=80",
     role: "Lead Full-Stack Architect",
     department: "Technology & Systems"
@@ -95,7 +95,7 @@ export const INITIAL_TASKS: Task[] = [
         task_id: "aaaa1111-0000-0000-0000-000000000002",
         actor: INITIAL_USERS[0],
         action: "created",
-        details: "Task created and assigned to Yash Jain",
+        details: "Task created and assigned to Alex Vance",
         created_at: new Date(Date.now() - 1 * 86400000).toISOString()
       }
     ]

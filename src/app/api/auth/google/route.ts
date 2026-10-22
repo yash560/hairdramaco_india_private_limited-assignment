@@ -4,8 +4,8 @@ import { getServerStore } from '@/lib/serverStore';
 export async function POST(req: NextRequest) {
   try {
     const data = await req.json();
-    const email = data.email || 'yash.dev@hairdramaco.com';
-    const name = data.name || 'Yash Jain';
+    const email = data.email || 'alex.tech@hairdramaco.com';
+    const name = data.name || 'Alex Vance';
 
     const store = getServerStore();
     let user = store.users.find(u => u.email.toLowerCase() === email.toLowerCase());
